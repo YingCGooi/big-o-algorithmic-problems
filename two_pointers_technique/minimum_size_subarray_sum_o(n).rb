@@ -7,7 +7,6 @@ def min_sub_array_len(arr, target)
 
   until left > last || right > last
     subarray_length = right - left + 1
-    # p left: left, right: right, sum: sum, right_value: arr[right]
     if sum < target
       right += 1
       sum += arr[right] if arr[right]

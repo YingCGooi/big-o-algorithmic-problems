@@ -1,6 +1,14 @@
 # Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 # Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
 
+# Sort the array - runtime of O(n log n)
+# Initialize writer pointer at index 0 and reader pointer at index 1
+# Compare the value of reader and writer pointers
+# If they are not equal, advance both pointers to the next indices
+# If they are equal, advance only the reader pointer until a non-equal value is found, then replace the value of writer pointer to the value of reader pointer
+# Repeat the compare, advance and writing steps above until the right pointer arrives at the end of the array
+# Drop the elements to the right of the left pointer
+
 # initialize left_pointer = 0
 # initialize right_pointer = 1
 # until right pointer hits the last element
