@@ -47,8 +47,6 @@ def search_for_range(arr, target)
     curr_value = arr[mid]
     next_value = arr[mid + 1]
 
-    p [prev_value, curr_value, next_value, left: left, mid: mid, right: right]
-
     if curr_value == target
       if prev_value == target
         right = mid - 1 

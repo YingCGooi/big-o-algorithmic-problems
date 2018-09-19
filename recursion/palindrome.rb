@@ -14,6 +14,17 @@ def is_palindrome?(str, first=0, last=str.length - 1)
   return is_palindrome?(str, first + 1, last - 1)
 end
 
+def is_palindrome?(str)
+  return palindrome_helper(str, 0, str.length - 1)
+end
+
+def palindrome_helper(str, first, last)
+  return true if str[first] == str[last]
+  return false if str[first] != str[last]
+
+  return is_palindrome?(str, first + 1, last - 1)  
+end
+
 p is_palindrome?('hello') # false
 p is_palindrome?('rotor') # true
 p is_palindrome?('a') # true

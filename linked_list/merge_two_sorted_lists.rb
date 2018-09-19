@@ -11,8 +11,7 @@ def merge_sorted(head1, head2)
     if next2.nil? || next1 && next1.val <= next2.val
       curr.next = next1
       next1 = next1.next
-    end
-    if next1.nil? || next2 && next2.val < next1.val
+    elsif next1.nil? || next2 && next2.val < next1.val
       curr.next = next2
       next2 = next2.next
     end
@@ -24,7 +23,7 @@ def merge_sorted(head1, head2)
 end
 
 puts merge_sorted n([1, 2, 4]), n([1, 3, 4]) # 1->1->2->3->4->4
-puts merge_sorted l(1, 2, 3, 3, 6), l(2, 4, 4, 5, 7) # 1->1->2->3->4->4
+puts merge_sorted l(1, 2, 3, 3, 6), l(2, 4, 4, 5, 7) # 1->1->2->2->3->3->4->4->5->6->7
 
 #  1 -> 2 -> 3 -> 3 -> 6
 #  C    N1

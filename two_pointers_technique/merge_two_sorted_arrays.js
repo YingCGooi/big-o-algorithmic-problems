@@ -9,7 +9,7 @@ function merge(arr, m, otherArr, n) {
 
   let r1 = m - 1;
   let r2 = n - 1;
-  let write = arr.length - 1;
+  let write = m + n - 1;
 
   while (r2 >= 0) {
     const val1 = arr[r1]; // || -INF
