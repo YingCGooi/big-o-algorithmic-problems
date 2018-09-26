@@ -5,13 +5,7 @@ class Node
   end
 
   def to_s
-    str = ''
-    node = self
-    while node
-      str << "[" + node.val.to_s + "]" + " -> "
-      node = node.next
-    end
-    str
+    "#{val} -> #{self.next}" if self
   end
 end
 
@@ -28,3 +22,5 @@ end
 def l(*arr)
   nodify(arr)
 end
+
+puts n([1, 2, 3])

@@ -28,8 +28,9 @@ p unique_paths(7, 3) # 28
 p unique_paths(3, 3) # 6
 # Example 1:
 
-# [S] [ ] [1]
-# [1] [1] [F]
+# [S] [1] [1] the total number of unique paths to x
+# [1] [2] [3]
+# [1] [3] [F]
 
 # [S] [ ] [ ]
 # [ ] [ ] [F]
