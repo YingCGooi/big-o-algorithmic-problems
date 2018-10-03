@@ -278,3 +278,28 @@ return cache[0] => true
 
 
 ```
+
+
+### Coin Change
+```ruby
+
+Given coins of different denomination - [1, 2, 5]
+sort => [1, 2, 5] and
+reverse => [5, 2, 1] O(n*log(n))
+
+
+                    { 5: 0, 2: 0, 1: 0 }, amt = 11
+                    /                 \
+                   /                   \
+    { 5: 1, 2: 0, 1: 0 }, amt = 6    {5:0,2:1,1:0}, amt=9
+          /            \
+         /              \
+  5:2,2:0,1:0, amt=1    {5:1, 2:1, 1:0}, amt=4
+      |                     |
+      |                     |
+  5:2,2:0,1:1, amt=0     {5:1, 2:2, 1:0}, amt=2
+=> num of coins (level) = 3     |
+                                |
+                         {5:1, 2:3, 1:0}, amt=0    
+                        => num of coins (level) = 4
+```     

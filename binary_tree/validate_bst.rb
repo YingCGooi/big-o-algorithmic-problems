@@ -48,6 +48,7 @@ def valid_left_right_node(node, min, max)
   node.val < right_node_value
 end
 
+
 root1 = 
   TreeNode.new(2,
     TreeNode.new(1),
